@@ -1,6 +1,6 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {colors, fonts, scale, verticalScale} from '@constants';
+import {colors, fonts, scale, widthDimension} from '@constants';
 import Texts from './texts';
 
 type Props = {
@@ -32,16 +32,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: verticalScale(-100),
-    paddingHorizontal: verticalScale(40),
+    height: widthDimension * 1.75,
   },
   title: {
     textAlign: 'center',
-    fontSize: fonts.size.font16,
-    marginBottom: 10,
+    fontSize: fonts.size.font14,
+    fontFamily: fonts.type.poppinsSemiBold,
+    color: colors.textGrey,
   },
   message: {
     textAlign: 'center',
-    color: colors.colorGrey,
+    color: colors.textGrey,
+    fontStyle: 'italic',
   },
 });

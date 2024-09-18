@@ -1,6 +1,6 @@
 import {Alert, FlatList, Platform, ToastAndroid, View} from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Container, Loading} from '@atoms';
+import {Container, Loading, NoData} from '@atoms';
 import {colors, posting} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
 
@@ -122,6 +122,7 @@ const TabHome = ({tab}: Props) => {
           offset: 200 * index,
           index,
         })}
+        ListEmptyComponent={() => <NoData />}
       />
 
       <MenuPostSheet menuRef={menuRef} onChangeMenu={handlerMenu} />

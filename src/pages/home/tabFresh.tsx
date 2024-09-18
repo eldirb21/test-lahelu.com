@@ -1,6 +1,6 @@
 import {Alert, FlatList, Platform, ToastAndroid, View} from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Container, Loading} from '@atoms';
+import {Container, Loading, NoData} from '@atoms';
 import {colors, fresh} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
 
@@ -60,7 +60,7 @@ const TabFresh = ({tab}: Props) => {
   return (
     <Container>
       <FlatList
-        data={fresh}
+        data={[]}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => (
@@ -73,6 +73,7 @@ const TabFresh = ({tab}: Props) => {
         onRefresh={handlerRefresh}
         refreshing={false}
         progressViewOffset={-500}
+        ListEmptyComponent={() => <NoData />}
       />
       <MenuPostSheet menuRef={menuRef} onChangeMenu={handlerMenu} />
     </Container>

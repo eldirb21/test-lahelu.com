@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Container, Loading} from '@atoms';
+import {Container, Loading, NoData} from '@atoms';
 import {ItemPost, MenuPostSheet} from '@molecules';
 import {colors, trending} from '@constants';
 
@@ -79,6 +79,7 @@ const TabTrending = ({tab}: Props) => {
         onRefresh={handlerRefresh}
         refreshing={false}
         progressViewOffset={-500}
+        ListEmptyComponent={() => <NoData />}
       />
       <MenuPostSheet menuRef={menuRef} onChangeMenu={handlerMenu} />
     </Container>

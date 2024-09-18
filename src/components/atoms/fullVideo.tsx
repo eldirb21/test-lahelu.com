@@ -71,7 +71,7 @@ const FullVideo = ({
         {...props}
       />
 
-      {isBuffering && <Texts style={styles.bufferingText}>Buffering...</Texts>}
+      {/* {isBuffering && <Texts style={styles.bufferingText}>Buffering...</Texts>} */}
 
       <TouchableOpacity style={styles.muteButton} onPress={handleMuteToggle}>
         <Icons
