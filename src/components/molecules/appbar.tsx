@@ -56,7 +56,7 @@ const Appbar = ({
                 borderRadius: 100,
                 marginRight: 15,
               }}>
-              <Icons type="Ionicons" name="menu" size={fonts.size.font26} />
+              <Icons type="Ionicons" name="menu" size={fonts.size.font26} color={colors.textGrey} />
             </TouchableOpacity>
           )}
           {!onClose && (
@@ -90,7 +90,7 @@ const Appbar = ({
             activeOpacity={0.5}
             onPress={onSearch}
             style={styles.iconbtn}>
-            <Icons type="Ionicons" name="search" size={fonts.size.font24} />
+            <Icons type="Ionicons" name="search" size={fonts.size.font24} color={colors.textGrey}/>
           </TouchableOpacity>
         )}
         {onClose && (
@@ -98,7 +98,7 @@ const Appbar = ({
             activeOpacity={0.5}
             onPress={onClose}
             style={styles.iconbtn}>
-            <Icons type="Ionicons" name="close" size={fonts.size.font24} />
+            <Icons type="Ionicons" name="close" size={fonts.size.font24} color={colors.textGrey}/>
           </TouchableOpacity>
         )}
       </View>

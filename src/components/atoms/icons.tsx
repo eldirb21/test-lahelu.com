@@ -14,6 +14,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
+import {colors} from '@constants';
 
 type IconProps = React.ComponentProps<typeof Ionicons> &
   React.ComponentProps<typeof AntDesign> &
@@ -33,51 +34,54 @@ type IconProps = React.ComponentProps<typeof Ionicons> &
 
 export default function Icons({
   type = 'MaterialIcons',
+  color,
   ...props
 }: {type?: string} & IconProps) {
   switch (type) {
     case 'AntDesign':
-      return <AntDesign {...props} />;
+      return <AntDesign {...props} color={color || colors.textGrey} />;
 
     case 'Feather':
-      return <Feather {...props} />;
+      return <Feather {...props} color={color || colors.textGrey} />;
 
     case 'Entypo':
-      return <Entypo {...props} />;
+      return <Entypo {...props} color={color || colors.textGrey} />;
 
     case 'FontAwesome':
-      return <FontAwesome {...props} />;
+      return <FontAwesome {...props} color={color || colors.textGrey} />;
 
     case 'FontAwesome5Brands':
     case 'FontAwesome5':
-      return <FontAwesome5 {...props} />;
+      return <FontAwesome5 {...props} color={color || colors.textGrey} />;
 
     case 'fontawesome5pro':
-      return <FontAwesome5Pro {...props} />;
+      return <FontAwesome5Pro {...props} color={color || colors.textGrey} />;
 
     case 'Fontisto':
-      return <Fontisto {...props} />;
+      return <Fontisto {...props} color={color || colors.textGrey} />;
 
     case 'EvilIcons':
-      return <EvilIcons {...props} />;
+      return <EvilIcons {...props} color={color || colors.textGrey} />;
 
     case 'Foundation':
-      return <Foundation {...props} />;
+      return <Foundation {...props} color={color || colors.textGrey} />;
 
     case 'Octicons':
-      return <Octicons {...props} />;
+      return <Octicons {...props} color={color || colors.textGrey} />;
 
     case 'MaterialCommunityIcons':
-      return <MaterialCommunityIcons {...props} />;
+      return (
+        <MaterialCommunityIcons {...props} color={color || colors.textGrey} />
+      );
 
     case 'Ionicons':
-      return <Ionicons {...props} />;
+      return <Ionicons {...props} color={color || colors.textGrey} />;
 
     case 'SimpleLineIcons':
-      return <SimpleLineIcons {...props} />;
+      return <SimpleLineIcons {...props} color={color || colors.textGrey} />;
 
     case 'Zocial':
-      return <Zocial {...props} />;
+      return <Zocial {...props} color={color || colors.textGrey} />;
   }
-  return <MaterialIcons {...props} />;
+  return <MaterialIcons {...props} color={color || colors.textGrey} />;
 }
