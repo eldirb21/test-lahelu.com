@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import React, {ReactNode, useState} from 'react';
 import {colors, fonts, scale, verticalScale} from '@constants';
-import {Icons, Texts} from '@atoms';
+import {Icons, Statusbars, Texts} from '@atoms';
 import TopTab from './topTab';
 import AppDrawer from './appDrawer';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
@@ -51,20 +51,25 @@ const Appbar = ({
     HEADER_HEIGHT,
     insets,
   );
+  console.log(
+    'headerHeight',
+    headerHeight,
+    headerHeight && parseFloat(headerHeight || 0),
+  );
 
-  console.log(headerHeight);
-  
+  const heights = Platform.OS === 'ios' ? headerHeight : headerHeight;
+
   return (
     <Animated.View
       style={[
         style,
         headerAnimation && styles.headerContainer,
-        {height: headerAnimation ? headerHeight : verticalScale(55)},
+        // {height: headerAnimation ? heights : verticalScale(55)},
       ]}>
       <Animated.View
         style={[
           styles.topHeader,
-          {height: headerAnimation ? headerHeight : verticalScale(55)},
+          {height: headerAnimation ? heights : verticalScale(55)},
         ]}>
         <View style={styles.drawer}>
           {showDrawer && (
@@ -155,6 +160,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: scale(10),
+    paddingTop: Platform.OS === 'ios' ? verticalScale(30) : 0,
   },
   drawer: {
     flexDirection: 'row',

@@ -54,15 +54,18 @@ const useAnimation = {
   },
 
   interpolates: (headerShown: any, HEADER_HEIGHT: any, insets: any) => {
-    const height = Platform.OS === 'ios' ? HEADER_HEIGHT/2 : HEADER_HEIGHT;
     const headerHeight = headerShown?.interpolate({
-      inputRange: [0, height + insets.top],
-      outputRange: [height + insets.top, insets.top + 0],
+      inputRange: [
+        0,
+        Platform.OS === 'ios' ? HEADER_HEIGHT + 15 : HEADER_HEIGHT + insets.top,
+      ],
+      outputRange: [
+        Platform.OS === 'ios' ? HEADER_HEIGHT + 15 : HEADER_HEIGHT + insets.top,
+        Platform.OS === 'ios' ? 0 : insets.top + 0,
+      ],
       extrapolate: 'clamp',
     });
 
-    console.log('headerHeight', headerHeight);
-    
     return headerHeight;
   },
 };
