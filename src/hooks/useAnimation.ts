@@ -1,6 +1,6 @@
 import {useFocusEffect} from '@react-navigation/native';
 import {useCallback, useEffect, useRef} from 'react';
-import {Animated, Easing} from 'react-native';
+import {Animated, Easing, Platform} from 'react-native';
 
 const useAnimation = {
   tab: (scaleAnim: Animated.Value | Animated.ValueXY, toValue: any) => {
@@ -54,11 +54,15 @@ const useAnimation = {
   },
 
   interpolates: (headerShown: any, HEADER_HEIGHT: any, insets: any) => {
+    const height = Platform.OS === 'ios' ? HEADER_HEIGHT/2 : HEADER_HEIGHT;
     const headerHeight = headerShown?.interpolate({
-      inputRange: [0, HEADER_HEIGHT + insets.top],
-      outputRange: [HEADER_HEIGHT + insets.top, insets.top + 0],
+      inputRange: [0, height + insets.top],
+      outputRange: [height + insets.top, insets.top + 0],
       extrapolate: 'clamp',
     });
+
+    console.log('headerHeight', headerHeight);
+    
     return headerHeight;
   },
 };

@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TestLaheluTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TestLaheluTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-TestLahelu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TestLahelu.a */; };
+		05907BC32993552CF3112FC8 /* libPods-TestLahelu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E41BF2B9B16C8D309962B4 /* libPods-TestLahelu.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-TestLahelu-TestLaheluTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TestLahelu-TestLaheluTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E1B6F0DCBD358CF3039548DB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CF419C34A012BCCEDE27A3A9 /* PrivacyInfo.xcprivacy */; };
+		1B8662777C3DB52A05EAAD21 /* libPods-TestLahelu-TestLaheluTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694985DCEB12BF8EF1F6BB0 /* libPods-TestLahelu-TestLaheluTests.a */; };
+		203D5A172C9C2DE10019F0B8 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 203D5A162C9C2DE10019F0B8 /* main.jsbundle */; };
 		76D32F8B5EBA493F8E119429 /* poppins-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA26189CD72C45338F1610C6 /* poppins-bold.ttf */; };
-		F719D480301C40FD9C4A56C4 /* poppins-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */; };
-		C05118377749430C9B9802E6 /* poppins-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B188F2EC17184490B1C38720 /* poppins-semiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 592B32E5CAA84D1BA1FA7AAE /* poppins-semiBold.ttf */; };
+		C05118377749430C9B9802E6 /* poppins-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */; };
+		E1B6F0DCBD358CF3039548DB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CF419C34A012BCCEDE27A3A9 /* PrivacyInfo.xcprivacy */; };
+		F719D480301C40FD9C4A56C4 /* poppins-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* TestLaheluTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLaheluTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TestLaheluTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLaheluTests.m; sourceTree = "<group>"; };
+		00E41BF2B9B16C8D309962B4 /* libPods-TestLahelu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLahelu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* TestLahelu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLahelu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TestLahelu/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TestLahelu/AppDelegate.mm; sourceTree = "<group>"; };
@@ -42,19 +44,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TestLahelu/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TestLahelu/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TestLahelu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TestLahelu-TestLaheluTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLahelu-TestLaheluTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-TestLahelu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu.debug.xcconfig"; path = "Target Support Files/Pods-TestLahelu/Pods-TestLahelu.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-TestLahelu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu.release.xcconfig"; path = "Target Support Files/Pods-TestLahelu/Pods-TestLahelu.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu-TestLaheluTests.debug.xcconfig"; path = "Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-TestLahelu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLahelu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1930354316775A96039CC9F0 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu-TestLaheluTests.debug.xcconfig"; path = "Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests.debug.xcconfig"; sourceTree = "<group>"; };
+		203D5A162C9C2DE10019F0B8 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		28D7D7640DA32298F91C1F9A /* Pods-TestLahelu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu.debug.xcconfig"; path = "Target Support Files/Pods-TestLahelu/Pods-TestLahelu.debug.xcconfig"; sourceTree = "<group>"; };
+		45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "poppins-medium.ttf"; path = "../src/assets/fonts/poppins-medium.ttf"; sourceTree = "<group>"; };
+		4AC564BF8AD6EB778CA926D9 /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu-TestLaheluTests.release.xcconfig"; path = "Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests.release.xcconfig"; sourceTree = "<group>"; };
+		592B32E5CAA84D1BA1FA7AAE /* poppins-semiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "poppins-semiBold.ttf"; path = "../src/assets/fonts/poppins-semiBold.ttf"; sourceTree = "<group>"; };
+		6694985DCEB12BF8EF1F6BB0 /* libPods-TestLahelu-TestLaheluTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLahelu-TestLaheluTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "poppins-regular.ttf"; path = "../src/assets/fonts/poppins-regular.ttf"; sourceTree = "<group>"; };
+		6EF316FDF3968834026A5676 /* Pods-TestLahelu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu.release.xcconfig"; path = "Target Support Files/Pods-TestLahelu/Pods-TestLahelu.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TestLahelu/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLahelu-TestLaheluTests.release.xcconfig"; path = "Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests.release.xcconfig"; sourceTree = "<group>"; };
-		CF419C34A012BCCEDE27A3A9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = TestLahelu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		AA26189CD72C45338F1610C6 /* poppins-bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "poppins-bold.ttf"; path = "../src/assets/fonts/poppins-bold.ttf"; sourceTree = "<group>"; };
+		CF419C34A012BCCEDE27A3A9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = TestLahelu/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		AA26189CD72C45338F1610C6 /* poppins-bold.ttf */ = {isa = PBXFileReference; name = "poppins-bold.ttf"; path = "../src/assets/fonts/poppins-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */ = {isa = PBXFileReference; name = "poppins-medium.ttf"; path = "../src/assets/fonts/poppins-medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */ = {isa = PBXFileReference; name = "poppins-regular.ttf"; path = "../src/assets/fonts/poppins-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		592B32E5CAA84D1BA1FA7AAE /* poppins-semiBold.ttf */ = {isa = PBXFileReference; name = "poppins-semiBold.ttf"; path = "../src/assets/fonts/poppins-semiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-TestLahelu-TestLaheluTests.a in Frameworks */,
+				1B8662777C3DB52A05EAAD21 /* libPods-TestLahelu-TestLaheluTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-TestLahelu.a in Frameworks */,
+				05907BC32993552CF3112FC8 /* libPods-TestLahelu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +99,7 @@
 		13B07FAE1A68108700A75B9A /* TestLahelu */ = {
 			isa = PBXGroup;
 			children = (
+				203D5A162C9C2DE10019F0B8 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -113,10 +116,21 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-TestLahelu.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-TestLahelu-TestLaheluTests.a */,
+				00E41BF2B9B16C8D309962B4 /* libPods-TestLahelu.a */,
+				6694985DCEB12BF8EF1F6BB0 /* libPods-TestLahelu-TestLaheluTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		444205B60DBB4E7F8F860349 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA26189CD72C45338F1610C6 /* poppins-bold.ttf */,
+				45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */,
+				6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */,
+				592B32E5CAA84D1BA1FA7AAE /* poppins-semiBold.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -154,25 +168,13 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-TestLahelu.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-TestLahelu.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */,
+				28D7D7640DA32298F91C1F9A /* Pods-TestLahelu.debug.xcconfig */,
+				6EF316FDF3968834026A5676 /* Pods-TestLahelu.release.xcconfig */,
+				1930354316775A96039CC9F0 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */,
+				4AC564BF8AD6EB778CA926D9 /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		444205B60DBB4E7F8F860349 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				AA26189CD72C45338F1610C6 /* poppins-bold.ttf */,
-				45AAB9E081BC44CEBDEE4FC6 /* poppins-medium.ttf */,
-				6EAECCA20A704C0EAB70E99D /* poppins-regular.ttf */,
-				592B32E5CAA84D1BA1FA7AAE /* poppins-semiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -181,12 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TestLaheluTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				7FB13E0B8454CA7E531F00CB /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				C6DCDF448F2D8B906F26A4CE /* [CP] Embed Pods Frameworks */,
+				BC7F798770A2FC36C708F685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,13 +204,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TestLahelu" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				448A9C7A4AA3D60705C01657 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				B151BE204A854796F601A7FA /* [CP] Embed Pods Frameworks */,
+				FAFE48373DA7AF4BAFD7B201 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +276,7 @@
 				F719D480301C40FD9C4A56C4 /* poppins-medium.ttf in Resources */,
 				C05118377749430C9B9802E6 /* poppins-regular.ttf in Resources */,
 				B188F2EC17184490B1C38720 /* poppins-semiBold.ttf in Resources */,
+				203D5A172C9C2DE10019F0B8 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,46 +299,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TestLahelu-TestLaheluTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		448A9C7A4AA3D60705C01657 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,7 +321,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		7FB13E0B8454CA7E531F00CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestLahelu-TestLaheluTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B151BE204A854796F601A7FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7F798770A2FC36C708F685 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DCDF448F2D8B906F26A4CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,7 +394,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		FAFE48373DA7AF4BAFD7B201 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,23 +409,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu/Pods-TestLahelu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLahelu-TestLaheluTests/Pods-TestLahelu-TestLaheluTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -441,7 +444,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */;
+			baseConfigurationReference = 1930354316775A96039CC9F0 /* Pods-TestLahelu-TestLaheluTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -468,7 +471,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */;
+			baseConfigurationReference = 4AC564BF8AD6EB778CA926D9 /* Pods-TestLahelu-TestLaheluTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -492,7 +495,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-TestLahelu.debug.xcconfig */;
+			baseConfigurationReference = 28D7D7640DA32298F91C1F9A /* Pods-TestLahelu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -519,7 +522,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-TestLahelu.release.xcconfig */;
+			baseConfigurationReference = 6EF316FDF3968834026A5676 /* Pods-TestLahelu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -615,10 +618,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -691,10 +691,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

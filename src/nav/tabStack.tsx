@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, Platform} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {tabStack} from './navConstant';
 import {Icons} from '@atoms';
@@ -106,9 +106,10 @@ const styles = StyleSheet.create({
   containerTabbar: {
     flexDirection: 'row',
     backgroundColor: colors.tabBackground,
-    height: verticalScale(45),
+    height: Platform.OS === 'ios' ? verticalScale(65) : verticalScale(45),
     justifyContent: 'center',
     alignItems: 'center',
+    paddingBottom: Platform.OS === 'ios' ? verticalScale(10) : 0,
   },
   tabItem: {
     flex: 1,
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: -4,
     },
-    shadowOpacity: 1.0,
+    shadowOpacity: 0.05,
     shadowRadius: 2,
     elevation: 4,
   },

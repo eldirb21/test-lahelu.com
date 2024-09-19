@@ -1,4 +1,10 @@
-import {Animated, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {
+  Animated,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, {ReactNode, useState} from 'react';
 import {colors, fonts, scale, verticalScale} from '@constants';
 import {Icons, Texts} from '@atoms';
@@ -21,7 +27,8 @@ type Props = {
   headerAnimation?: boolean;
 };
 
-const HEADER_HEIGHT = verticalScale(45);
+const HEADER_HEIGHT =
+  Platform.OS === 'ios' ? verticalScale(55) : verticalScale(45);
 
 const Appbar = ({
   title,
@@ -45,6 +52,8 @@ const Appbar = ({
     insets,
   );
 
+  console.log(headerHeight);
+  
   return (
     <Animated.View
       style={[

@@ -84,7 +84,7 @@ const FullVideo = ({
 
       {isPaused && (
         <View style={styles.playOverlay}>
-          <Icons type="Ionicons" name="play" size={28} color="white" />
+          <Icons type="Ionicons" name="play" size={20} color="white" />
         </View>
       )}
 
@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
 
   playOverlay: {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
+    top: '55%',
+    left: '55%',
     transform: [{translateX: -50}, {translateY: -50}],
     padding: 10,
     paddingHorizontal: 20,

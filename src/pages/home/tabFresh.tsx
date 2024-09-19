@@ -91,6 +91,6 @@ export default TabFresh;
 
 const styles = StyleSheet.create({
   scrolled: {
-    paddingTop: verticalScale(90),
+    paddingTop: Platform.OS === 'ios' ? verticalScale(140) : verticalScale(90),
   },
 });

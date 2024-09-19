@@ -36,7 +36,8 @@ const posting = [
     totalShare: 2,
     contentTitle: 'Sample video',
     contentType: 'video', //text|image|video|gif
-    content: 'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
+    content:
+      'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
   },
   {
     id: 7,
@@ -49,7 +50,8 @@ const posting = [
     totalShare: 2,
     contentTitle: 'Sample video',
     contentType: 'video', //text|image|video|gif
-    content: 'https://archive.org/download/TearsOfSteel480pmp4/TearsOfSteel_480p.mp4',
+    content:
+      'https://archive.org/download/TearsOfSteel480pmp4/TearsOfSteel_480p.mp4',
   },
   {
     id: 1,
@@ -63,7 +65,7 @@ const posting = [
     contentTitle: 'Beautiful girl korean',
     contentType: 'image', //text|image|video|gif
     content:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsIFDtShUsK8_d82GWO2-YiE6T4dgIXbJAYw&s',
+      'https://i.pinimg.com/originals/7d/b4/f6/7db4f60df1eed8af1b4d03b37b3d1a40.jpg',
   },
   {
     id: 2,
@@ -77,7 +79,7 @@ const posting = [
     contentTitle: 'Beautiful View',
     contentType: 'image', //text|image|video|gif
     content:
-      'https://images.pexels.com/photos/3768263/pexels-photo-3768263.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      'https://i.discogs.com/JRBvH17Gpj74DXTROVbBTKPezEPeEGQ-cwLi-yZzhGE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkyNTg2/NDItMTQ3NzUyNDc3/OC02NTI5LnBuZw.jpeg',
   },
   {
     id: 3,
@@ -105,7 +107,7 @@ const posting = [
     contentTitle: 'Beautiful girl korean',
     contentType: 'image', //text|image|video|gif
     content:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPelAPNuYhh2xju7U90wB2MaJS6WsrvhlHdA&s',
+      'https://i.pinimg.com/736x/eb/07/c3/eb07c32d4a054a3fcb603d82cffb23a7.jpg',
   },
 ];
 const fresh = [
