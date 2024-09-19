@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {Alert, Platform, StyleSheet, ToastAndroid, View} from 'react-native';
 import React from 'react';
 import {Drawer, Icons, Texts} from '@atoms';
 import {colors, drawerScreen, fonts} from '@constants';
@@ -10,16 +10,28 @@ type Props = {
 };
 
 const AppDrawer = ({isVisible, onClose}: Props) => {
+  const handleLogin = () => {
+    if (Platform.OS === 'ios') {
+      Alert.alert('Comming Soon');
+    } else {
+      ToastAndroid.show('Comming Soon', 500);
+    }
+  };
   return (
     <Drawer showClose={false} isVisible={isVisible} onClose={onClose}>
-      <View style={{margin:20}}/>
+      <View style={{margin: 20}} />
       <View style={styles.messageCard}>
         <Texts style={styles.messageTitle}>
           Mau ngepost meme kamu sendiri?
         </Texts>
-        <Texts style={{textAlign:'center'}}>Login dengan Google sekarang!</Texts>
+        <Texts style={{textAlign: 'center'}}>
+          Login dengan Google sekarang!
+        </Texts>
 
-        <TouchableOpacity style={styles.btnLogin}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          style={styles.btnLogin}
+          onPress={handleLogin}>
           <Texts style={styles.btnLoginText}>Login</Texts>
         </TouchableOpacity>
       </View>
@@ -59,7 +71,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: fonts.size.font14,
     fontFamily: fonts.type.poppinsSemiBold,
-    marginBottom:8
+    marginBottom: 8,
   },
   btnLogin: {
     backgroundColor: colors.tabIconActive,

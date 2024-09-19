@@ -90,6 +90,6 @@ export default TabTrending;
 
 const styles = StyleSheet.create({
   scrolled: {
-    paddingTop: Platform.OS === 'ios' ? verticalScale(110) : verticalScale(90),
+    paddingTop: Platform.OS === 'ios' ? verticalScale(120) : verticalScale(90),
   },
 });
