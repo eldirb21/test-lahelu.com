@@ -12,12 +12,12 @@ type Props = {
 const AppDrawer = ({isVisible, onClose}: Props) => {
   return (
     <Drawer showClose={false} isVisible={isVisible} onClose={onClose}>
-      <View style={{margin:10}}/>
+      <View style={{margin:20}}/>
       <View style={styles.messageCard}>
         <Texts style={styles.messageTitle}>
           Mau ngepost meme kamu sendiri?
         </Texts>
-        <Texts>Login dengan Google sekarang!</Texts>
+        <Texts style={{textAlign:'center'}}>Login dengan Google sekarang!</Texts>
 
         <TouchableOpacity style={styles.btnLogin}>
           <Texts style={styles.btnLoginText}>Login</Texts>
@@ -57,8 +57,9 @@ const styles = StyleSheet.create({
   },
   messageTitle: {
     textAlign: 'center',
-    fontSize: fonts.size.font16,
-    fontFamily: fonts.type.poppinsBold,
+    fontSize: fonts.size.font14,
+    fontFamily: fonts.type.poppinsSemiBold,
+    marginBottom:8
   },
   btnLogin: {
     backgroundColor: colors.tabIconActive,

@@ -12,7 +12,7 @@ import {Container} from '@atoms';
 const Drawer = ({
   isVisible,
   isLeft = true,
-  width = widthDimension * 0.75,
+  width = widthDimension * 0.60,
   onClose,
   children = <View />,
 }: any) => {
