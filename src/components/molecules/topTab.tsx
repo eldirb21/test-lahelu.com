@@ -1,7 +1,7 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Texts} from '@atoms';
-import {colors, fonts, scale, widthDimension} from '@constants';
+import {colors, fonts, scale, verticalScale, widthDimension} from '@constants';
 import {TouchableOpacity} from 'react-native';
 
 type Props = {
@@ -14,7 +14,7 @@ const TopTab = ({data, selected, onChange}: Props) => {
   return (
     <View
       style={{
-        height: scale(40),
+        height: verticalScale(40),
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: colors.white,

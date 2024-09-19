@@ -9,13 +9,14 @@ import {
 import React, {useRef, useState} from 'react';
 import {Container, Loading, NoData} from '@atoms';
 import {ItemPost, MenuPostSheet} from '@molecules';
-import {colors, trending} from '@constants';
+import {colors, trending, verticalScale} from '@constants';
 
 type Props = {
   tab?: any;
+  onScroll?: any;
 };
 
-const TabTrending = ({tab}: Props) => {
+const TabTrending = ({tab, onScroll}: Props) => {
   if (tab !== 'Trending') return null;
 
   const menuRef = useRef<any>(null);
@@ -42,7 +43,7 @@ const TabTrending = ({tab}: Props) => {
       setloadMore(false);
     }, 500);
   };
-  const renderFooter = () => (!loadMore ? null : <Loading />);
+  const renderFooter = () => (!loadMore ? null : <Loading bordered/>);
 
   const renderHeader = () => (!refreshing ? null : <Loading />);
 
@@ -66,6 +67,8 @@ const TabTrending = ({tab}: Props) => {
   return (
     <Container>
       <FlatList
+        onScroll={onScroll}
+        contentContainerStyle={styles.scrolled}
         data={trending}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
@@ -88,4 +91,8 @@ const TabTrending = ({tab}: Props) => {
 
 export default TabTrending;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  scrolled: {
+    paddingTop: verticalScale(90),
+  },
+});

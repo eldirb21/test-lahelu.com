@@ -1,9 +1,10 @@
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Animated, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React, {ReactNode, useState} from 'react';
 import {colors, fonts, scale, verticalScale} from '@constants';
-import {Drawer, Icons, Texts} from '@atoms';
+import {Icons, Texts} from '@atoms';
 import TopTab from './topTab';
 import AppDrawer from './appDrawer';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 type Props = {
   title?: any;
@@ -15,7 +16,11 @@ type Props = {
   tabs?: any;
   onChangeTab?: any;
   style?: any;
+  headerShown?: any;
+  headerAnimation?: boolean;
 };
+
+const HEADER_HEIGHT = verticalScale(45);
 
 const Appbar = ({
   title,
@@ -27,15 +32,29 @@ const Appbar = ({
   tabs,
   onChangeTab,
   style,
+  headerShown,
+  headerAnimation,
 }: Props) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const insets = useSafeAreaInsets();
+
+  const headerHeight = headerShown?.interpolate({
+    inputRange: [0, HEADER_HEIGHT + insets.top],
+    outputRange: [HEADER_HEIGHT + insets.top, insets.top + 0],
+    extrapolate: 'clamp',
+  });
 
   return (
-    <View style={style}>
-      <View
+    <Animated.View
+      style={[
+        style,
+        headerAnimation && styles.headerContainer,
+        {height: headerAnimation ? headerHeight : verticalScale(55)},
+      ]}>
+      <Animated.View
         style={[
           {
-            height: verticalScale(45),
+            height: headerAnimation ? headerHeight : verticalScale(55),
             backgroundColor: colors.white,
             justifyContent: 'space-between',
             flexDirection: 'row',
@@ -56,7 +75,12 @@ const Appbar = ({
                 borderRadius: 100,
                 marginRight: 15,
               }}>
-              <Icons type="Ionicons" name="menu" size={fonts.size.font26} color={colors.textGrey} />
+              <Icons
+                type="Ionicons"
+                name="menu"
+                size={fonts.size.font26}
+                color={colors.textGrey}
+              />
             </TouchableOpacity>
           )}
           {!onClose && (
@@ -90,7 +114,12 @@ const Appbar = ({
             activeOpacity={0.5}
             onPress={onSearch}
             style={styles.iconbtn}>
-            <Icons type="Ionicons" name="search" size={fonts.size.font24} color={colors.textGrey}/>
+            <Icons
+              type="Ionicons"
+              name="search"
+              size={fonts.size.font24}
+              color={colors.textGrey}
+            />
           </TouchableOpacity>
         )}
         {onClose && (
@@ -98,10 +127,15 @@ const Appbar = ({
             activeOpacity={0.5}
             onPress={onClose}
             style={styles.iconbtn}>
-            <Icons type="Ionicons" name="close" size={fonts.size.font24} color={colors.textGrey}/>
+            <Icons
+              type="Ionicons"
+              name="close"
+              size={fonts.size.font24}
+              color={colors.textGrey}
+            />
           </TouchableOpacity>
         )}
-      </View>
+      </Animated.View>
 
       {tabs && (
         <TopTab data={tabs} selected={selectTab} onChange={onChangeTab} />
@@ -112,13 +146,21 @@ const Appbar = ({
         isVisible={drawerVisible}
         onClose={() => setDrawerVisible(false)}
       />
-    </View>
+    </Animated.View>
   );
 };
 
 export default Appbar;
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 10,
+    backgroundColor: 'lightblue',
+  },
   textShadow: {
     textShadowColor: colors.splash,
     textShadowRadius: 5,

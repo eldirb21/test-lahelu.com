@@ -1,14 +1,22 @@
-import {Alert, FlatList, Platform, ToastAndroid, View} from 'react-native';
+import {
+  Alert,
+  FlatList,
+  Platform,
+  StyleSheet,
+  ToastAndroid,
+  View,
+} from 'react-native';
 import React, {useRef, useState} from 'react';
 import {Container, Loading, NoData} from '@atoms';
-import {colors, posting} from '@constants';
+import {colors, posting, verticalScale} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
 
 type Props = {
   tab: any;
+  onScroll?: any;
 };
 
-const TabHome = ({tab}: Props) => {
+const TabHome = ({tab, onScroll}: Props) => {
   if (tab !== 'Home') return null;
 
   const menuRef = useRef<any>(null);
@@ -37,7 +45,7 @@ const TabHome = ({tab}: Props) => {
       setloadMore(false);
     }, 500);
   };
-  const renderFooter = () => (!loadMore ? null : <Loading />);
+  const renderFooter = () => (!loadMore ? null : <Loading bordered />);
 
   const renderHeader = () => (!refreshing ? null : <Loading />);
 
@@ -97,6 +105,8 @@ const TabHome = ({tab}: Props) => {
   return (
     <Container>
       <FlatList
+        onScroll={onScroll}
+        contentContainerStyle={styles.scrolled}
         data={posting}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
@@ -131,3 +141,9 @@ const TabHome = ({tab}: Props) => {
 };
 
 export default TabHome;
+
+const styles = StyleSheet.create({
+  scrolled: {
+    paddingTop: verticalScale(90),
+  },
+});

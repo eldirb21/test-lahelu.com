@@ -1,14 +1,22 @@
-import {Alert, FlatList, Platform, ToastAndroid, View} from 'react-native';
+import {
+  Alert,
+  FlatList,
+  Platform,
+  StyleSheet,
+  ToastAndroid,
+  View,
+} from 'react-native';
 import React, {useRef, useState} from 'react';
 import {Container, Loading, NoData} from '@atoms';
-import {colors, fresh} from '@constants';
+import {colors, fresh, verticalScale} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
 
 type Props = {
   tab?: any;
+  onScroll?: any;
 };
 
-const TabFresh = ({tab}: Props) => {
+const TabFresh = ({tab, onScroll}: Props) => {
   if (tab !== 'Fresh') return null;
 
   const menuRef = useRef<any>(null);
@@ -35,7 +43,7 @@ const TabFresh = ({tab}: Props) => {
       setloadMore(false);
     }, 500);
   };
-  const renderFooter = () => (!loadMore ? null : <Loading />);
+  const renderFooter = () => (!loadMore ? null : <Loading bordered/>);
 
   const renderHeader = () => (!refreshing ? null : <Loading />);
 
@@ -60,7 +68,9 @@ const TabFresh = ({tab}: Props) => {
   return (
     <Container>
       <FlatList
-        data={[]}
+        onScroll={onScroll}
+        contentContainerStyle={styles.scrolled}
+        data={fresh}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => (
@@ -81,3 +91,9 @@ const TabFresh = ({tab}: Props) => {
 };
 
 export default TabFresh;
+
+const styles = StyleSheet.create({
+  scrolled: {
+    paddingTop: verticalScale(90),
+  },
+});
