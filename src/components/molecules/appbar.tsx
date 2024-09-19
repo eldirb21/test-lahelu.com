@@ -1,14 +1,13 @@
 import {
   Animated,
   Platform,
-  StatusBar,
   StyleSheet,
   TouchableOpacity,
   View,
 } from 'react-native';
 import React, {ReactNode, useState} from 'react';
 import {colors, fonts, scale, verticalScale} from '@constants';
-import {Icons, Statusbars, Texts} from '@atoms';
+import {Icons, Texts} from '@atoms';
 import TopTab from './topTab';
 import AppDrawer from './appDrawer';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
