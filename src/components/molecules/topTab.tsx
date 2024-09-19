@@ -1,26 +1,28 @@
-import {StyleSheet, View} from 'react-native';
+import {Animated, StyleSheet} from 'react-native';
 import React from 'react';
 import {Texts} from '@atoms';
-import {colors, fonts, scale, verticalScale, widthDimension} from '@constants';
+import {colors, fonts, verticalScale, widthDimension} from '@constants';
 import {TouchableOpacity} from 'react-native';
 
 type Props = {
   data?: any;
   selected?: any;
   onChange?: (item: string) => void;
+  heights?: any;
 };
 
-const TopTab = ({data, selected, onChange}: Props) => {
+const TopTab = ({
+  data,
+  heights = verticalScale(40),
+  selected,
+  onChange,
+}: Props) => {
   return (
-    <View
-      style={{
-        height: verticalScale(40),
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: colors.white,
-        borderColor: colors.borderColor,
-        borderTopWidth: 0.5,
-      }}>
+    <Animated.View
+      style={[
+        {height: !isNaN(heights) ? heights / 2 : heights},
+        styles.tabContainer,
+      ]}>
       {data.map((item: any, index: any) => {
         return (
           <TouchableOpacity
@@ -30,10 +32,7 @@ const TopTab = ({data, selected, onChange}: Props) => {
             style={{
               borderBottomWidth: selected === item ? 2 : 0,
               width: widthDimension / data?.length || 0,
-              borderColor: colors.tabIconActive,
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%',
+              ...styles.tabItem,
             }}>
             <Texts
               style={{
@@ -46,10 +45,24 @@ const TopTab = ({data, selected, onChange}: Props) => {
           </TouchableOpacity>
         );
       })}
-    </View>
+    </Animated.View>
   );
 };
 
 export default TopTab;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tabContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.white,
+    borderColor: colors.borderColor,
+    borderTopWidth: 0.5,
+  },
+  tabItem: {
+    borderColor: colors.tabIconActive,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+  },
+});

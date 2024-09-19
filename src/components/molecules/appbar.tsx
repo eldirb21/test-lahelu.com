@@ -1,6 +1,7 @@
 import {
   Animated,
   Platform,
+  StatusBar,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -28,7 +29,7 @@ type Props = {
 };
 
 const HEADER_HEIGHT =
-  Platform.OS === 'ios' ? verticalScale(55) : verticalScale(45);
+  Platform.OS === 'ios' ? verticalScale(45) : verticalScale(45);
 
 const Appbar = ({
   title,
@@ -51,25 +52,16 @@ const Appbar = ({
     HEADER_HEIGHT,
     insets,
   );
-  console.log(
-    'headerHeight',
-    headerHeight,
-    headerHeight && parseFloat(headerHeight || 0),
-  );
-
-  const heights = Platform.OS === 'ios' ? headerHeight : headerHeight;
 
   return (
-    <Animated.View
-      style={[
-        style,
-        headerAnimation && styles.headerContainer,
-        // {height: headerAnimation ? heights : verticalScale(55)},
-      ]}>
+    <Animated.View style={[style, headerAnimation && styles.headerContainer]}>
+      {Platform.OS === 'ios' && (
+        <View style={{height: 35, backgroundColor: colors.white}} />
+      )}
       <Animated.View
         style={[
           styles.topHeader,
-          {height: headerAnimation ? heights : verticalScale(55)},
+          {height: headerAnimation ? headerHeight : verticalScale(55)},
         ]}>
         <View style={styles.drawer}>
           {showDrawer && (
@@ -120,7 +112,12 @@ const Appbar = ({
       </Animated.View>
 
       {tabs && (
-        <TopTab data={tabs} selected={selectTab} onChange={onChangeTab} />
+        <TopTab
+          data={tabs}
+          heights={headerHeight}
+          selected={selectTab}
+          onChange={onChangeTab}
+        />
       )}
       {children}
 
@@ -160,7 +157,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: scale(10),
-    paddingTop: Platform.OS === 'ios' ? verticalScale(30) : 0,
+    // paddingTop: Platform.OS === 'ios' ? verticalScale(30) : 0,
   },
   drawer: {
     flexDirection: 'row',
