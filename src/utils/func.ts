@@ -26,5 +26,8 @@ const Func = {
       });
     }
   },
+  viewabilityConfig: {
+    itemVisiblePercentThreshold: 50,
+  },
 };
 export default Func;

@@ -10,6 +10,7 @@ import BottomSheet from './bottomSheet';
 import Drawer from './drawer';
 import Loading from './loading';
 import FullVideo from './fullVideo';
+import Separators from './separators';
 
 export {
   Icons,
@@ -24,4 +25,5 @@ export {
   Loading,
   FullImage,
   FullVideo,
+  Separators,
 };

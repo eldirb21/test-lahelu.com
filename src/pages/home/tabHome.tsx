@@ -4,12 +4,12 @@ import {
   Platform,
   StyleSheet,
   ToastAndroid,
-  View,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Container, Loading, NoData} from '@atoms';
-import {colors, posting, verticalScale} from '@constants';
+import {Container, Loading, NoData, Separators} from '@atoms';
+import {posting, verticalScale} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
+import {Func} from '@utils';
 
 type Props = {
   tab: any;
@@ -68,10 +68,6 @@ const TabHome = ({tab, onScroll}: Props) => {
     },
   ).current;
 
-  const viewabilityConfig = {
-    itemVisiblePercentThreshold: 50,
-  };
-
   const renderItem = ({item, index}: any) => {
     return (
       <ItemPost
@@ -110,9 +106,6 @@ const TabHome = ({tab, onScroll}: Props) => {
         data={posting}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => (
-          <View style={{height: 4, backgroundColor: colors.separator}} />
-        )}
         ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
         onEndReachedThreshold={0.5}
@@ -122,7 +115,7 @@ const TabHome = ({tab, onScroll}: Props) => {
         progressViewOffset={-500}
         keyExtractor={(item: any, index: any) => index.toString()}
         onViewableItemsChanged={onViewableItemsChanged}
-        viewabilityConfig={viewabilityConfig}
+        viewabilityConfig={Func.viewabilityConfig}
         removeClippedSubviews
         initialNumToRender={5}
         maxToRenderPerBatch={5}
@@ -133,6 +126,7 @@ const TabHome = ({tab, onScroll}: Props) => {
           index,
         })}
         ListEmptyComponent={() => <NoData />}
+        ItemSeparatorComponent={() => <Separators />}
       />
 
       <MenuPostSheet menuRef={menuRef} onChangeMenu={handlerMenu} />

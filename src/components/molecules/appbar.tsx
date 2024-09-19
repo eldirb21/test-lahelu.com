@@ -5,6 +5,7 @@ import {Icons, Texts} from '@atoms';
 import TopTab from './topTab';
 import AppDrawer from './appDrawer';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {useAnimation} from '@hooks';
 
 type Props = {
   title?: any;
@@ -38,11 +39,11 @@ const Appbar = ({
   const [drawerVisible, setDrawerVisible] = useState(false);
   const insets = useSafeAreaInsets();
 
-  const headerHeight = headerShown?.interpolate({
-    inputRange: [0, HEADER_HEIGHT + insets.top],
-    outputRange: [HEADER_HEIGHT + insets.top, insets.top + 0],
-    extrapolate: 'clamp',
-  });
+  const headerHeight = useAnimation.interpolates(
+    headerShown,
+    HEADER_HEIGHT,
+    insets,
+  );
 
   return (
     <Animated.View
@@ -53,28 +54,15 @@ const Appbar = ({
       ]}>
       <Animated.View
         style={[
-          {
-            height: headerAnimation ? headerHeight : verticalScale(55),
-            backgroundColor: colors.white,
-            justifyContent: 'space-between',
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingHorizontal: scale(10),
-          },
+          styles.topHeader,
+          {height: headerAnimation ? headerHeight : verticalScale(55)},
         ]}>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
+        <View style={styles.drawer}>
           {showDrawer && (
             <TouchableOpacity
               activeOpacity={0.5}
               onPress={() => setDrawerVisible(true)}
-              style={{
-                borderRadius: 100,
-                marginRight: 15,
-              }}>
+              style={styles.drawerbtn}>
               <Icons
                 type="Ionicons"
                 name="menu"
@@ -84,29 +72,9 @@ const Appbar = ({
             </TouchableOpacity>
           )}
           {!onClose && (
-            <Texts
-              style={[
-                {
-                  color: colors.tabIconActive,
-                  fontFamily: fonts.type.poppinsBold,
-                  fontSize: fonts.size.font20,
-                },
-                styles.textShadow,
-              ]}>
-              {title}
-            </Texts>
+            <Texts style={[styles.unclose, styles.textShadow]}>{title}</Texts>
           )}
-          {onClose && (
-            <Texts
-              style={[
-                {
-                  fontFamily: fonts.type.poppinsBold,
-                  fontSize: fonts.size.font14,
-                },
-              ]}>
-              {title}
-            </Texts>
-          )}
+          {onClose && <Texts style={[styles.close]}>{title}</Texts>}
         </View>
 
         {onSearch && (
@@ -171,5 +139,29 @@ const styles = StyleSheet.create({
   },
   iconbtn: {
     borderRadius: 100,
+  },
+  topHeader: {
+    backgroundColor: colors.white,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: scale(10),
+  },
+  drawer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  drawerbtn: {
+    borderRadius: 100,
+    marginRight: 15,
+  },
+  unclose: {
+    color: colors.tabIconActive,
+    fontFamily: fonts.type.poppinsBold,
+    fontSize: fonts.size.font20,
+  },
+  close: {
+    fontFamily: fonts.type.poppinsBold,
+    fontSize: fonts.size.font14,
   },
 });

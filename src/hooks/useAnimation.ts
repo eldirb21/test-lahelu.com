@@ -52,6 +52,15 @@ const useAnimation = {
       useNativeDriver: false,
     }).start(func);
   },
+
+  interpolates: (headerShown: any, HEADER_HEIGHT: any, insets: any) => {
+    const headerHeight = headerShown?.interpolate({
+      inputRange: [0, HEADER_HEIGHT + insets.top],
+      outputRange: [HEADER_HEIGHT + insets.top, insets.top + 0],
+      extrapolate: 'clamp',
+    });
+    return headerHeight;
+  },
 };
 
 export default useAnimation;

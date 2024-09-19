@@ -4,11 +4,10 @@ import {
   Platform,
   StyleSheet,
   ToastAndroid,
-  View,
 } from 'react-native';
 import React, {useRef, useState} from 'react';
-import {Container, Loading, NoData} from '@atoms';
-import {colors, fresh, verticalScale} from '@constants';
+import {Container, Loading, NoData, Separators} from '@atoms';
+import {fresh, verticalScale} from '@constants';
 import {ItemPost, MenuPostSheet} from '@molecules';
 
 type Props = {
@@ -43,7 +42,7 @@ const TabFresh = ({tab, onScroll}: Props) => {
       setloadMore(false);
     }, 500);
   };
-  const renderFooter = () => (!loadMore ? null : <Loading bordered/>);
+  const renderFooter = () => (!loadMore ? null : <Loading bordered />);
 
   const renderHeader = () => (!refreshing ? null : <Loading />);
 
@@ -73,9 +72,6 @@ const TabFresh = ({tab, onScroll}: Props) => {
         data={fresh}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => (
-          <View style={{height: 4, backgroundColor: colors.separator}} />
-        )}
         ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
         onEndReachedThreshold={0.5}
@@ -84,6 +80,7 @@ const TabFresh = ({tab, onScroll}: Props) => {
         refreshing={false}
         progressViewOffset={-500}
         ListEmptyComponent={() => <NoData />}
+        ItemSeparatorComponent={() => <Separators />}
       />
       <MenuPostSheet menuRef={menuRef} onChangeMenu={handlerMenu} />
     </Container>
