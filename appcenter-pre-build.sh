@@ -6,3 +6,19 @@
 
 # # Install Yarn jika diperlukan
 # npm install -g yarn@3.6.4
+
+#!/bin/bash
+
+# Set JAVA_HOME to the correct path
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)  # Adjust version as needed
+echo "JAVA_HOME set to $JAVA_HOME"
+
+# Install NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Install Node.js (if needed)
+nvm install 18 # Replace with your desired version
+
+# Install Yarn
+npm install -g yarn@3.6.0 # Change to a valid version if needed
