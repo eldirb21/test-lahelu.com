@@ -10,7 +10,7 @@
 #!/bin/bash
 
 # Set JAVA_HOME to the correct path
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)  # Adjust version as needed
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 echo "JAVA_HOME set to $JAVA_HOME"
 
 # Install NVM
