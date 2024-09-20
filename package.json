@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android-build": "cd android && ./gradlew clean && ./gradlew --stop && ENVFILE=.env ./gradlew assembleRelease",
     "ios": "react-native run-ios",
     "ios-bundle": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
     "lint": "eslint .",
