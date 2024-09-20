@@ -15,10 +15,9 @@ echo "JAVA_HOME set to $JAVA_HOME"
 
 # Install NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Install Node.js (if needed)
-nvm install 18 # Replace with your desired version
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install 18
+nvm use 18
 
 # Install Yarn
 npm install -g yarn@1.22.22
