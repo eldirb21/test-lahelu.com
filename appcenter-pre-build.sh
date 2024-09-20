@@ -21,4 +21,4 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 18 # Replace with your desired version
 
 # Install Yarn
-npm install -g yarn@3.6.0 # Change to a valid version if needed
+npm install -g yarn@3.6.4 # Change to a valid version if needed
