@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android-install": "npm install",
+    "android-clean": "cd android && ./gradlew clean && ./gradlew --stop && cd ..",
     "android-build": "cd android && ./gradlew clean && ./gradlew --stop && ENVFILE=.env ./gradlew assembleRelease",
     "ios": "react-native run-ios",
+    "ios-install": "cd ios && pod deintegrate && pod cache clean --all && pod install && cd ../",
     "ios-bundle": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
     "lint": "eslint .",
     "start": "react-native start",
