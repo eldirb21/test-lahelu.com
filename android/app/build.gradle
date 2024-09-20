@@ -17,6 +17,11 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
     namespace "com.testlahelu"
     defaultConfig {
         applicationId "com.testlahelu"
@@ -28,11 +33,6 @@ android {
         resValue "string", "CodePushDeploymentKey", '"9a4f64c6-9b2a-4c9a-af04-91c73a1ac55e"'
     }
 
-     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
-    }
-    
     signingConfigs {
         release {
             if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
@@ -69,6 +69,10 @@ dependencies {
     implementation("com.facebook.react:react-android")
     
     implementation project(':react-native-code-push')
+
+    implementation 'com.microsoft.appcenter:appcenter-analytics:4.5.0'  
+    implementation 'com.microsoft.appcenter:appcenter-crashes:4.5.0' 
+
 
     implementation project(':react-native-vector-icons')
 
