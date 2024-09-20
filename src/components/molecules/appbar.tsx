@@ -25,6 +25,7 @@ type Props = {
   style?: any;
   headerShown?: any;
   headerAnimation?: boolean;
+  withlogo?: boolean;
 };
 
 const HEADER_HEIGHT =
@@ -42,6 +43,7 @@ const Appbar = ({
   style,
   headerShown,
   headerAnimation,
+  withlogo = false,
 }: Props) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const insets = useSafeAreaInsets();
@@ -76,10 +78,12 @@ const Appbar = ({
               />
             </TouchableOpacity>
           )}
-          {!onClose && (
+          {!onClose && withlogo && (
             <Texts style={[styles.unclose, styles.textShadow]}>{title}</Texts>
           )}
-          {onClose && <Texts style={[styles.close]}>{title}</Texts>}
+          {(onClose || !withlogo) && (
+            <Texts style={[styles.close]}>{title}</Texts>
+          )}
         </View>
 
         {onSearch && (

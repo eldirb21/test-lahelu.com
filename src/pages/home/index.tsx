@@ -18,10 +18,11 @@ const Home = (props: Props) => {
   return (
     <Container statusbar bgColor={colors.white} style={{position: 'relative'}}>
       <Appbar
+        withlogo
         headerShown={scrolling}
         headerAnimation
         showDrawer
-        title="AI"
+        title="Lahelu"
         onSearch={() => setSearchVisible(true)}
         tabs={['Home', 'Fresh', 'Trending']}
         selectTab={tabSelect}
