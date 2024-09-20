@@ -84,6 +84,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
+        resValue "string", "CodePushDeploymentKey", '"9a4f64c6-9b2a-4c9a-af04-91c73a1ac55e"'
     }
     signingConfigs {
         release {

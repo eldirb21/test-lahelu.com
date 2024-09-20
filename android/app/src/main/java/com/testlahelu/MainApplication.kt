@@ -17,6 +17,12 @@ class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
       object : DefaultReactNativeHost(this) {
+
+        // Menambahkan lokasi bundle dari CodePush
+        override fun getJSBundleFile(): String? {
+          return CodePush.getJSBundleFile()  
+        }
+
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
