@@ -11,4 +11,4 @@ nvm install 18
 nvm use 18
 
 # Install Yarn
-npm install -g yarn@1.22.22
+npm install -g yarn@3.6.4
