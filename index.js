@@ -7,7 +7,7 @@ import App from './App';
 import {name as appName} from './app.json';
 import { AppCenter } from 'appcenter';
 
-AppCenter.start('9a4f64c6-9b2a-4c9a-af04-91c73a1ac55e', [
+AppCenter.start('beb00daf-17bf-464e-a6d6-87e3c212345e', [
     AppCenterAnalytics,
     AppCenterCrashes
 ]);
