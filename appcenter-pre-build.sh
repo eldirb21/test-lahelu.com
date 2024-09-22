@@ -1,8 +1,14 @@
 #!/bin/bash
 
+echo "Setting up Java 11 for the build..."
+
 # Set JAVA_HOME to the correct path for Java 11
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-echo "JAVA_HOME set to $JAVA_HOME"
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Verify that Java 11 is being used
+java -version
+
 
 # Install NVM (Node Version Manager) if it's not installed
 export NVM_DIR="$HOME/.nvm"
