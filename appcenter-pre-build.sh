@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "Setting up Java 11 for the build..."
+echo "Setting up Java 17 for the build..."
 
-# Set JAVA_HOME to the correct path for Java 11
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+# Set JAVA_HOME to the correct path for Java 17
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export PATH=$JAVA_HOME/bin:$PATH
 
-# Verify that Java 11 is being used
+# Verify that Java 17 is being used
 java -version
 
 
