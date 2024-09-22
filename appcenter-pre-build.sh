@@ -1,27 +1,29 @@
-# # #!/bin/bash
+#!/bin/bash
 
-# # Set JAVA_HOME to the correct path
-# export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-# echo "JAVA_HOME set to $JAVA_HOME"
+# Set JAVA_HOME to the correct path for Java 11
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+echo "JAVA_HOME set to $JAVA_HOME"
 
-# # Install NVM
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-# nvm install 18
-# nvm use 18
+# Install NVM (Node Version Manager) if it's not installed
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" || {
+    echo "Installing NVM..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    source "$NVM_DIR/nvm.sh"
+}
 
-# # Install Yarn
+# Install Node.js version 18 and use it
+nvm install 18
+nvm use 18
+echo "Using Node.js version $(node -v)"
+
+# # Install Yarn globally, specifying the version
 # npm install -g yarn@3.6.4
-
-#!/usr/bin/env bash
+# echo "Yarn installed globally, version $(yarn -v)"
 
 # Example: Change bundle name of an iOS app for non-production
-if [ "$APPCENTER_BRANCH" != "main" ];
-then
-    plutil -replace CFBundleDisplayName -string "\$(PRODUCT_NAME) Production" $APPCENTER_SOURCE_DIRECTORY/TestLahelu/Info.plist
+if [ "$APPCENTER_BRANCH" != "main" ]; then
+    plutil -replace CFBundleDisplayName -string "\$(PRODUCT_NAME) Production" "$APPCENTER_SOURCE_DIRECTORY/TestLahelu/Info.plist"
+    echo "CFBundleDisplayName updated for branch: $APPCENTER_BRANCH"
 fi
-
-#!/usr/bin/env bash
-# Set Java 11
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
+ 
