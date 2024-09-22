@@ -20,3 +20,8 @@ if [ "$APPCENTER_BRANCH" != "main" ];
 then
     plutil -replace CFBundleDisplayName -string "\$(PRODUCT_NAME) Production" $APPCENTER_SOURCE_DIRECTORY/TestLahelu/Info.plist
 fi
+
+#!/usr/bin/env bash
+# Set Java 11
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
